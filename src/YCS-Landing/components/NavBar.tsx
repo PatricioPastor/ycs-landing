@@ -8,11 +8,10 @@ export const NavBar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      console.log(scrollY)
       const threshold = 700; // Punto específico donde quieres que cambie el fondo
 
       if (scrollY > threshold) {
-        setNavbarBg('#f1f1f1'); // Cambiar el color de fondo cuando se supera el punto específico
+        setNavbarBg('#F2FAFF'); // Cambiar el color de fondo cuando se supera el punto específico
       } else {
         setNavbarBg('transparent'); // Volver al color de fondo original si se encuentra por debajo del punto específico
       }

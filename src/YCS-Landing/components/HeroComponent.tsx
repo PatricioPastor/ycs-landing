@@ -1,7 +1,7 @@
 
 export const HeroComponent = () => {
   return (
-    <section className=" bg-white w-full h-screen relative top-0">
+    <section className=" bg-[#EEFAFF] w-full h-screen relative top-0">
         <div className="flex flex-wrap flex-col items-center my-auto h-full justify-center" >
             <div className="text-center mt-20 z-40 animate-fade-down animate-once animate-delay-500 animate-duration-1000 animate-ease-in-out">
                 <h1 className="text-6xl mb-5 font-bold " >Software Development</h1>

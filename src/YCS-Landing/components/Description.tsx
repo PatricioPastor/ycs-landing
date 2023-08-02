@@ -1,14 +1,35 @@
+import { useEffect } from 'react';
+import ScrollReveal from 'scrollreveal'
 
 
 export const Description = () => {
+  
+  useEffect(() => {
+    const sr = ScrollReveal();
 
+    sr.reveal('.fadeInUp', {
+      origin: 'top',
+      distance: '40px',
+      duration: 1000,
+      delay: 200,
+      opacity: 0,
+      easing: 'ease',
+      reset: false,
+    });
+
+    // Agrega más configuraciones de animación si lo deseas para otros elementos
+
+    return () => {
+      sr.destroy(); // Limpia los listeners de ScrollReveal cuando el componente se desmonta
+    };
+  }, []);
 
 
   return (
     
-        <section className="text-gray-200 pt-36 pb-56 bg-blue-800 text-center flex-col flex justify-center items-center">
-         <div className="w-[70%] animate-fade-left animate-once animate-duration-1500  animate-delay-1000 animate-ease-in-out">
-          <h2 className="text-5xl font-bold mb-20 py-8 rounded bg-blue-900 shadow-2xl">Elevate Your Restaurant with <br /> Next-Gen Software Solutions</h2>
+        <section className="text-gray-200 pt-36 pb-80 bg-[#009AFA] text-center flex-col flex justify-center items-center">
+         <div className="w-[70%] fadeInUp">
+          <h2 className="text-5xl font-bold mb-20 w-[80%] mx-auto py-8 rounded bg-[#0369A1] drop-shadow-2xl shadow-2xl">Elevate Your Restaurant with <br /> Next-Gen Software Solutions</h2>
           <p className="mb-6 text-xl">Welcome to YCS PR Corp - <b> Your Expert Restaurant Technology Partner</b></p>
           <p className="mb-6 text-xl">Embark on a journey of seamless <b>digital transformation</b> with YCS PR Corp, the leading name in Software Development for Restaurants. Based in Puerto Rico and established in 2011, we are the driving force behind the success stories of countless restaurants in Puerto Rico and the vibrant Caribbean.</p>
           <p className="mb-6 text-xl">Our passion lies in creating bespoke <b>Software solutions tailored to your restaurant's unique needs </b>. From pioneering custom integrations for credit card processing in Points of Sale (POS) to providing web and mobile development that dazzles, we are your trusted partner in enhancing every aspect of your restaurant's operations.</p>
